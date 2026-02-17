@@ -1,4 +1,4 @@
-import PageHeading from "./PageHeading.jsx";
+import PageHeading from "./shared/PageHeading.jsx";
 import ProductListings from "./product/ProductListings.jsx";
 import {useEffect, useState} from "react";
 import apiClient from "../api/apiClient.js";

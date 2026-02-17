@@ -1,4 +1,4 @@
-import PageTitle from "../PageTitle";
+import PageTitle from "../shared/PageTitle.jsx";
 
 export default function About() {
     const h3Style = "text-lg font-semibold text-primary dark:text-light mb-2";

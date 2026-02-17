@@ -8,11 +8,13 @@ import About from "./components/about/About.jsx";
 import Contact from "./components/contact/Contact.jsx";
 import Home from "./components/Home.jsx";
 import Login from "./components/login/Login.jsx";
+import ErrorBoundary from "./components/shared/ErrorBoundary.jsx";
 
 const appRouter = createBrowserRouter([
     {
         path: "/",
         element: <App/>,
+        errorElement: <ErrorBoundary/>,
         children: [
             {
                 index: true,

@@ -1,4 +1,4 @@
-import PageTitle from "../PageTitle.jsx";
+import PageTitle from "../shared/PageTitle.jsx";
 import {Link} from "react-router-dom";
 
 export default function Login() {

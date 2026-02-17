@@ -1,4 +1,4 @@
-import Price from "./Price.jsx";
+import Price from "../shared/Price.jsx";
 
 export default function ProductCard({product}) {
     return (

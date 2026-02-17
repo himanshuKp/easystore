@@ -1,5 +1,5 @@
 import {useNavigation} from "react-router-dom";
-import PageTitle from "../PageTitle.jsx";
+import PageTitle from "../shared/PageTitle.jsx";
 import emptyCartImage from "../../assets/util/emptycart.png";
 
 export default function Cart() {
