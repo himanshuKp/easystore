@@ -1,14 +1,18 @@
 import './App.css'
 import Header from "./components/shared/Header.jsx";
 import Footer from "./components/shared/Footer.jsx";
-import {Outlet} from "react-router-dom";
+import {Outlet, useNavigation} from "react-router-dom";
+import {HydrateFallback} from "./components/shared/HydrateFallback.jsx";
 
 function App() {
+    const navigation = useNavigation();
 
     return (
         <>
             <Header/>
-            <Outlet/>
+            {
+                navigation.state === "loading" ? <HydrateFallback/> : <Outlet/>
+            }
             <Footer/>
         </>
     )
