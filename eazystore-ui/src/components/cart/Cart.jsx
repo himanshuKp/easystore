@@ -1,9 +1,9 @@
-import {useNavigation} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import PageTitle from "../shared/PageTitle.jsx";
 import emptyCartImage from "../../assets/util/emptycart.png";
 
 export default function Cart() {
-    const navigation = useNavigation();
+    const navigation = useNavigate();
 
     const handleClick = () => {
         navigation("/home", {
