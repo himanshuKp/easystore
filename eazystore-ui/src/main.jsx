@@ -13,6 +13,7 @@ import {productsLoader} from "./components/product/ProductsLoader.jsx";
 import {Bounce, ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {contactAction} from "./components/contact/ContactAction.jsx";
+import ProductDetail from "./components/product/ProductDetail.jsx";
 
 const routerDefinitions = createRoutesFromElements(
     <Route path="/" element={<App/>} errorElement={<ErrorBoundary/>}>
@@ -22,6 +23,7 @@ const routerDefinitions = createRoutesFromElements(
         <Route path={"/contact"} element={<Contact/>} action={contactAction}/>
         <Route path={"/login"} element={<Login/>}/>
         <Route path={"/cart"} element={<Cart/>}/>
+        <Route path={"/product/:productId"} element={<ProductDetail/>}/>
     </Route>
 )
 

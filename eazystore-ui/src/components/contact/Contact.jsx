@@ -1,20 +1,33 @@
 import PageTitle from "../shared/PageTitle.jsx";
-import {Form, useActionData, useNavigation} from "react-router-dom";
+import {Form, useActionData, useNavigation, useSubmit} from "react-router-dom";
 import {useEffect, useRef} from "react";
 import {toast} from "react-toastify";
 
 export default function Contact() {
     const actionData = useActionData();
-    const formData = useRef(null);
+    const formRef = useRef(null);
     const navigation = useNavigation();
+    const submit = useSubmit();
     const isSubmitting = navigation.state === "submitting";
 
     useEffect(() => {
         if (actionData?.success) {
-            formData.current?.reset();
+            formRef.current?.reset();
             toast.success("Your message has been successfully submitted!");
         }
     }, [actionData]);
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        const userConfirmed = window.confirm("Are you sure you want to submit the form?");
+
+        if (userConfirmed) {
+            const formData = new FormData(formRef.current);
+            submit(formData, {method: "POST"});
+        } else {
+            toast.info("Form submission cancelled.!");
+        }
+    }
 
     const labelStyle =
         "block text-lg font-semibold text-primary dark:text-light mb-2";
@@ -29,7 +42,7 @@ export default function Contact() {
                 We’d love to hear from you! If you have any questions, feedback, or
                 suggestions, please don’t hesitate to reach out.
             </p>
-            <Form ref={formData} method={"POST"} className={"space-y-6 max-w-3xl mx-auto"}>
+            <Form ref={formRef} method={"POST"} onSubmit={handleSubmit} className={"space-y-6 max-w-3xl mx-auto"}>
                 <div>
                     <label htmlFor="name" className={labelStyle}>
                         Name
