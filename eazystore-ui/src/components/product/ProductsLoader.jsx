@@ -5,6 +5,6 @@ export async function productsLoader() {
         const response = await apiClient.get("/products");
         return response.data;
     } catch (error) {
-        throw new Response(error.message || "Failed to capture products. Please try again.", {status: error.status || 500})
+        throw new Response(error?.response?.data?.errorMessage || error.message || "Failed to capture products. Please try again.", {status: error.status || 500})
     }
 }

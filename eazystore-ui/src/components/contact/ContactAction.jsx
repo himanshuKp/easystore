@@ -15,6 +15,6 @@ export async function contactAction({request}) {
             success: true
         }
     } catch (error) {
-        throw new Response(error.message || "Failed to submit your messages. Please try again.", {status: error.status || 500});
+        throw new Response(error?.response?.data?.errorMessage || error.message || "Failed to submit your messages. Please try again.", {status: error.status || 500});
     }
 }
