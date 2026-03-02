@@ -3,6 +3,7 @@ package com.himanshu.easystore.controller;
 import com.himanshu.easystore.dto.ContactDTO;
 import com.himanshu.easystore.service.IContactService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,12 +19,8 @@ public class ContactController {
     }
 
     @PostMapping
-    public String saveContact(@RequestBody ContactDTO contactDTO) {
-        boolean isSaved = contactService.saveContact(contactDTO);
-        if (isSaved) {
-            return "Request processed successfully";
-        } else  {
-            return "Failed to save contact. Please try again.";
-        }
+    public ResponseEntity<String> saveContact(@RequestBody ContactDTO contactDTO) {
+        contactService.saveContact(contactDTO);
+        return ResponseEntity.ok("Contact saved successfully");
     }
 }

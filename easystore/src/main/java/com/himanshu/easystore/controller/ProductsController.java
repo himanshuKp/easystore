@@ -3,13 +3,15 @@ package com.himanshu.easystore.controller;
 import com.himanshu.easystore.dto.ProductDTO;
 import com.himanshu.easystore.service.IProductService;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @RestController
 @RequestMapping("/api/v1/products")
 public class ProductsController {
@@ -17,7 +19,8 @@ public class ProductsController {
     private final IProductService productService;
 
     @GetMapping
-    public List<ProductDTO> getProducts(){
-        return productService.findAll();
+    public ResponseEntity<List<ProductDTO>> getProducts(){
+        List<ProductDTO> productDTOList = productService.findAll();
+        return ResponseEntity.ok(productDTOList);
     }
 }
