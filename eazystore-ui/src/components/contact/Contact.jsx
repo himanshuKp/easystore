@@ -68,8 +68,9 @@ export default function Contact() {
 
                 {/* Email and mobile Row */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                    {/* Email Field */}
-                    <div>
+
+                    {/* Column 1: Email Group */}
+                    <div className="flex flex-col">
                         <label htmlFor="email" className={labelStyle}>
                             Email
                         </label>
@@ -81,16 +82,16 @@ export default function Contact() {
                             className={textFieldStyle}
                             required
                         />
+                        {
+                            actionData?.errors?.email &&
+                            <p className={"text-red-500 text-sm mt-1"}>
+                                {actionData.errors.email}
+                            </p>
+                        }
                     </div>
-                    {
-                        actionData?.errors?.email &&
-                        <p className={"text-red-500 text-sm mt-1"}>
-                            {actionData.errors.email}
-                        </p>
-                    }
 
                     {/* Mobile Field */}
-                    <div>
+                    <div className="flex flex-col">
                         <label htmlFor="mobileNumber" className={labelStyle}>
                             Mobile Number
                         </label>
@@ -104,14 +105,14 @@ export default function Contact() {
                             placeholder="Your Mobile Number"
                             className={textFieldStyle}
                         />
+                        {
+                            actionData?.errors?.mobileNumber && (
+                                <p className={"text-red-500 text-sm mt-1"}>
+                                    {actionData.errors.mobileNumber}
+                                </p>
+                            )
+                        }
                     </div>
-                    {
-                        actionData?.errors?.mobileNumber && (
-                            <p className={"text-red-500 text-sm mt-1"}>
-                                {actionData.errors.mobileNumber}
-                            </p>
-                        )
-                    }
                 </div>
 
                 {/* Message Field */}

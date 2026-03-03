@@ -15,12 +15,12 @@ export async function contactAction({request}) {
             success: true
         }
     } catch (error) {
-        if (error?.response.status === 400) {
+        if (error?.response && error.response.data && error.response.data.errors) {
             return {
                 success: false,
-                errors: error.response?.data
+                errors: error.response.data.errors
             }
         }
-        throw new Response(error?.response?.data?.errorMessage || error.message || "Failed to submit your messages. Please try again.", {status: error.status || 500});
+        throw new Response(error?.response?.data?.title || error.message || "Failed to submit your messages. Please try again.", {status: error.status || 500});
     }
 }
