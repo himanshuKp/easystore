@@ -18,7 +18,7 @@ public class DummyController {
     }
 
     @GetMapping("/headers")
-    public ResponseEntity<String> requestHeader(@RequestHeader Map<String, String> headers) {
+    public ResponseEntity<String> requestHeader(@RequestBody Map<String, String> headers) {
         return ResponseEntity.ok("Request header response: " + headers.toString());
     }
 }

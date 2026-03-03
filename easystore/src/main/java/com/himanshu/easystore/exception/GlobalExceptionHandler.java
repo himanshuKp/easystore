@@ -4,6 +4,7 @@ import com.himanshu.easystore.dto.ErrorMessageDTO;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ProblemDetail;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -21,22 +22,34 @@ import java.util.Set;
 public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
-    public ResponseEntity<ErrorMessageDTO> handleException(Exception exception, WebRequest webRequest) {
-        ErrorMessageDTO errorMessageDTO = new ErrorMessageDTO(
-                webRequest.getDescription(false),
+    public ProblemDetail handleException(Exception exception, WebRequest webRequest) {
+        ProblemDetail problemDetail = ProblemDetail.forStatusAndDetail(
                 HttpStatus.INTERNAL_SERVER_ERROR,
-                exception.getMessage(),
-                LocalDateTime.now()
+                exception.getMessage()
         );
-        return new ResponseEntity<>(errorMessageDTO, HttpStatus.INTERNAL_SERVER_ERROR);
+
+        problemDetail.setTitle("Internal Server Error");
+        problemDetail.setProperty("timestamp", LocalDateTime.now());
+        problemDetail.setProperty("path", webRequest.getDescription(false));
+        return problemDetail;
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<Map<String, String>> handleValidationsException(MethodArgumentNotValidException methodArgumentNotValidException) {
+    public ProblemDetail handleValidationsException(MethodArgumentNotValidException methodArgumentNotValidException) {
+        ProblemDetail problemDetail = ProblemDetail.forStatus(
+                HttpStatus.BAD_REQUEST
+        );
+
         Map<String, String> errors = new HashMap<>();
-        List<FieldError> fieldErrors = methodArgumentNotValidException.getBindingResult().getFieldErrors();
-        fieldErrors.forEach(fieldError -> errors.put(fieldError.getField(), fieldError.getDefaultMessage()));
-        return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
+        methodArgumentNotValidException.getBindingResult().getFieldErrors().forEach(fieldError -> {
+            errors.put(fieldError.getField(), fieldError.getDefaultMessage());
+        });
+
+        problemDetail.setTitle("Bad Request");
+        problemDetail.setProperty("timestamp", LocalDateTime.now());
+        problemDetail.setProperty("errors", errors);
+
+        return problemDetail;
     }
 
     @ExceptionHandler(ConstraintViolationException.class)
