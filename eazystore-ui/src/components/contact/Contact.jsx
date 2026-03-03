@@ -57,6 +57,13 @@ export default function Contact() {
                         minLength={5}
                         maxLength={30}
                     />
+                    {
+                        actionData?.errors?.name && (
+                            <p className={"text-red-500 text-sm mt-1"}>
+                                {actionData.errors.name}
+                            </p>
+                        )
+                    }
                 </div>
 
                 {/* Email and mobile Row */}
@@ -75,6 +82,12 @@ export default function Contact() {
                             required
                         />
                     </div>
+                    {
+                        actionData?.errors?.email &&
+                        <p className={"text-red-500 text-sm mt-1"}>
+                            {actionData.errors.email}
+                        </p>
+                    }
 
                     {/* Mobile Field */}
                     <div>
@@ -92,6 +105,13 @@ export default function Contact() {
                             className={textFieldStyle}
                         />
                     </div>
+                    {
+                        actionData?.errors?.mobileNumber && (
+                            <p className={"text-red-500 text-sm mt-1"}>
+                                {actionData.errors.mobileNumber}
+                            </p>
+                        )
+                    }
                 </div>
 
                 {/* Message Field */}
@@ -110,6 +130,13 @@ export default function Contact() {
                         maxLength={500}
                     ></textarea>
                 </div>
+                {
+                    actionData?.errors?.message && (
+                        <p className={"text-red-500 text-sm mt-1"}>
+                            {actionData.errors.message}
+                        </p>
+                    )
+                }
 
                 {/* Submit Button */}
                 <div className="text-center">
