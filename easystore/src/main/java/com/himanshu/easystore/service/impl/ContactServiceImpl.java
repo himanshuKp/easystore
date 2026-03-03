@@ -22,15 +22,11 @@ public class ContactServiceImpl implements IContactService {
 
     @Override
     public boolean saveContact(ContactDTO contactDTO) {
-        try {
-            Contact contact = mapDTOToContact(contactDTO);
-            contact.setCreatedAt(Instant.now());
-            contact.setCreatedBy(contactDTO.getName());
-            contactRepository.save(contact);
-            return true;
-        }  catch (Exception e) {
-            return false;
-        }
+        Contact contact = mapDTOToContact(contactDTO);
+        contact.setCreatedAt(Instant.now());
+        contact.setCreatedBy(contactDTO.getName());
+        contactRepository.save(contact);
+        return true;
     }
 
     private Contact mapDTOToContact(ContactDTO contactDTO) {
