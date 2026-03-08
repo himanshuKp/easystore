@@ -14,6 +14,7 @@ import {Bounce, ToastContainer} from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import {contactAction} from "./components/contact/ContactAction.jsx";
 import ProductDetail from "./components/product/ProductDetail.jsx";
+import {CartProvider} from "./components/store/CartProvider.jsx";
 
 const routerDefinitions = createRoutesFromElements(
     <Route path="/" element={<App/>} errorElement={<ErrorBoundary/>}>
@@ -31,7 +32,9 @@ const appRouter = createBrowserRouter(routerDefinitions);
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <RouterProvider router={appRouter}/>
+        <CartProvider>
+            <RouterProvider router={appRouter}/>
+        </CartProvider>
         <ToastContainer
             position="top-center"
             autoClose={3000}
