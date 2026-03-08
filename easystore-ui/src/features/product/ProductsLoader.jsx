@@ -1,0 +1,10 @@
+import apiClient from "../../api/clients/apiClient.js";
+
+export async function productsLoader() {
+    try {
+        const response = await apiClient.get("/products");
+        return response.data;
+    } catch (error) {
+        throw new Response(error?.response?.data?.errorMessage || error.message || "Failed to capture products. Please try again.", {status: error.status || 500})
+    }
+}

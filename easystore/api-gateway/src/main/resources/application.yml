@@ -1,8 +1,10 @@
 spring:
   application:
     name: api-gateway
+  threads:
+    virtual:
+      enabled: true
   cloud:
-    gateway:
     consul:
       host: localhost
       port: 8500
@@ -11,6 +13,31 @@ spring:
         register: true
         health-check-interval: 10s
         instance-id: ${spring.application.name}:${server.port}
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:5173"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+      routes:
+        - id: product-service
+          uri: lb://product-service
+          predicates:
+            - Path=/api/v1/products/**
+        - id: contact-service
+          uri: lb://contact-service
+          predicates:
+            - Path=/api/v1/contacts/**
+        - id: ai-service
+          uri: lb://ai-service
+          predicates:
+            - Path=/api/v1/ai/**
+
 management:
   endpoints:
     web:

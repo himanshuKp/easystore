@@ -11,7 +11,7 @@ import lombok.Setter;
 @Setter
 public class ContactDTO {
     @NotBlank(message = "Name cannot be empty")
-    @Size(min = 5, max = 10, message = "Name must be between 5 and 10 characters")
+    @Size(min = 5, max = 100, message = "Name must be between 5 and 100 characters")
     private String name;
 
     @NotBlank(message = "Email cannot be empty")
@@ -23,6 +23,6 @@ public class ContactDTO {
     private String mobileNumber;
 
     @NotBlank(message = "Message cannot be empty")
-    @Size(min = 5, max = 300, message = "Message must be between 5 and 10 characters")
+    @Size(min = 5, max = 300, message = "Message must be between 5 and 300 characters")
     private String message;
 }
