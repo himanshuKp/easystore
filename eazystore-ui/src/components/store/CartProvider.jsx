@@ -2,6 +2,10 @@ import {CART_ACTIONS, cartReducer} from "./CartReducer.js";
 import {useCallback, useEffect, useMemo, useReducer} from "react";
 import {CartContext} from "./CartContext";
 
+/**
+ * Generates the initial cart state from localStorage.
+ * @returns {Array<Object>} The parsed cart array or empty array if failed.
+ */
 const initialCartState = () => {
     try {
         const storedCart = localStorage.getItem("cart");
@@ -12,6 +16,12 @@ const initialCartState = () => {
     }
 };
 
+/**
+ * Provides Cart context to the application, holding state and dispatch functions.
+ * 
+ * @param {Object} props
+ * @param {import('react').ReactNode} props.children
+ */
 export const CartProvider = ({children}) => {
 
     const [cart, dispatch] = useReducer(cartReducer, [], initialCartState);

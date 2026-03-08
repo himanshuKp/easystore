@@ -3,7 +3,24 @@ import {Link} from "react-router-dom";
 import {faTimes} from "@fortawesome/free-solid-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
+/**
+ * CartTable component renders the items currently in the shopping cart.
+ * Uses `useCart` hook for state management (addToCart, removeFromCart).
+ *
+ * @component
+ * @returns {import('react').JSX.Element} The rendered cart table.
+ */
 export default function CartTable() {
+    /**
+     * @typedef {Object} CartItem
+     * @property {number} productId
+     * @property {string} name
+     * @property {number} quantity
+     * @property {number} price
+     * @property {string} imageUrl
+     */
+
+    /** @type {{ cart: CartItem[], addToCart: Function, removeFromCart: Function }} */
     const {cart, addToCart, removeFromCart} = useCart();
 
     const subtotal = cart.reduce((acc, item) => acc + item.price * item.quantity, 0)
