@@ -19,6 +19,7 @@
     <modules>
         <module>core-common</module>
         <module>api-gateway</module>
+        <module>identity-service</module>
         <module>product-service</module>
         <module>contact-service</module>
         <module>ai-service</module>
