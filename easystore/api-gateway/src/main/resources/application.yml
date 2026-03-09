@@ -15,10 +15,11 @@ spring:
         instance-id: ${spring.application.name}:${server.port}
     gateway:
       globalcors:
-        corsConfigurations:
+        cors-configurations:
           '[/**]':
-            allowedOrigins: "http://localhost:5173"
-            allowedMethods:
+            allowed-origins:
+              - "http://localhost:5173"
+            allowed-methods:
               - GET
               - POST
               - PUT
