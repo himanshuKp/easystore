@@ -1,0 +1,137 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< com.himanshu.easystore:discovery-server >---------------
+[INFO] Building discovery-server 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] >>> spring-boot:4.0.3:run (default-cli) > test-compile @ discovery-server >>>
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ discovery-server ---
+[INFO] Copying 1 resource from src/main/resources to target/classes
+[INFO] Copying 0 resource from src/main/resources to target/classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ discovery-server ---
+[INFO] Nothing to compile - all classes are up to date.
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ discovery-server ---
+[INFO] skip non existing resourceDirectory /Users/himanshukandpal/github/projects/easystore-react-springboot/easystore/discovery-server/src/test/resources
+[INFO] 
+[INFO] --- compiler:3.14.1:testCompile (default-testCompile) @ discovery-server ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] <<< spring-boot:4.0.3:run (default-cli) < test-compile @ discovery-server <<<
+[INFO] 
+[INFO] 
+[INFO] --- spring-boot:4.0.3:run (default-cli) @ discovery-server ---
+[INFO] Attaching agents: []
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v4.0.3)
+
+2026-03-08T15:19:18.776+05:30  INFO 22275 --- [discovery-server] [  restartedMain] c.h.e.d.DiscoveryServerApplication       : Starting DiscoveryServerApplication using Java 25.0.1 with PID 22275 (/Users/himanshukandpal/github/projects/easystore-react-springboot/easystore/discovery-server/target/classes started by himanshukandpal in /Users/himanshukandpal/github/projects/easystore-react-springboot/easystore/discovery-server)
+2026-03-08T15:19:18.779+05:30  INFO 22275 --- [discovery-server] [  restartedMain] c.h.e.d.DiscoveryServerApplication       : No active profile set, falling back to 1 default profile: "default"
+2026-03-08T15:19:19.057+05:30  INFO 22275 --- [discovery-server] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-03-08T15:19:19.058+05:30  INFO 22275 --- [discovery-server] [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-03-08T15:19:19.341+05:30  WARN 22275 --- [discovery-server] [  restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.ai.autoconfigure.openai.OpenAiAutoConfiguration]: Type org.springframework.boot.autoconfigure.web.client.RestClientAutoConfiguration not present
+2026-03-08T15:19:19.345+05:30  INFO 22275 --- [discovery-server] [  restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-03-08T15:19:19.355+05:30 ERROR 22275 --- [discovery-server] [  restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanDefinitionStoreException: Failed to process import candidates for configuration class [org.springframework.ai.autoconfigure.openai.OpenAiAutoConfiguration]: Type org.springframework.boot.autoconfigure.web.client.RestClientAutoConfiguration not present
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:644) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.doProcessConfigurationClass(ConfigurationClassParser.java:362) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.processConfigurationClass(ConfigurationClassParser.java:283) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:634) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.lambda$processGroupImports$0(ConfigurationClassParser.java:864) ~[spring-context-7.0.5.jar:7.0.5]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[na:na]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:860) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.process(ConfigurationClassParser.java:831) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.parse(ConfigurationClassParser.java:200) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.processConfigBeanDefinitions(ConfigurationClassPostProcessor.java:446) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassPostProcessor.postProcessBeanDefinitionRegistry(ConfigurationClassPostProcessor.java:310) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanDefinitionRegistryPostProcessors(PostProcessorRegistrationDelegate.java:349) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:118) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:795) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:603) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.3.jar:4.0.3]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.3.jar:4.0.3]
+	at com.himanshu.easystore.discovery.DiscoveryServerApplication.main(DiscoveryServerApplication.java:11) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.3.jar:4.0.3]
+Caused by: java.lang.TypeNotPresentException: Type org.springframework.boot.autoconfigure.web.client.RestClientAutoConfiguration not present
+	at java.base/sun.reflect.annotation.TypeNotPresentExceptionProxy.generateException(TypeNotPresentExceptionProxy.java:47) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationInvocationHandler.invoke(AnnotationInvocationHandler.java:87) ~[na:na]
+	at jdk.proxy2/jdk.proxy2.$Proxy38.classes(Unknown Source) ~[na:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565) ~[na:na]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:281) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:266) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.AnnotationUtils.invokeAnnotationMethod(AnnotationUtils.java:1077) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.AnnotationTypeMapping$MirrorSets$MirrorSet.resolve(AnnotationTypeMapping.java:638) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.AnnotationTypeMapping$MirrorSets.resolve(AnnotationTypeMapping.java:604) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.TypeMappedAnnotation.<init>(TypeMappedAnnotation.java:125) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.TypeMappedAnnotation.<init>(TypeMappedAnnotation.java:109) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.TypeMappedAnnotation.from(TypeMappedAnnotation.java:593) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.MergedAnnotation.from(MergedAnnotation.java:547) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.AnnotationUtils.getAnnotationAttributes(AnnotationUtils.java:864) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.AnnotationUtils.getAnnotationAttributes(AnnotationUtils.java:819) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.core.annotation.AnnotationUtils.getAnnotationAttributes(AnnotationUtils.java:797) ~[spring-core-7.0.5.jar:7.0.5]
+	at org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.getConfigurationsForAnnotation(ImportAutoConfigurationImportSelector.java:98) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.collectCandidateConfigurations(ImportAutoConfigurationImportSelector.java:93) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.lambda$getCandidateConfigurations$0(ImportAutoConfigurationImportSelector.java:86) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:987) ~[na:na]
+	at org.springframework.util.MultiValueMapAdapter.forEach(MultiValueMapAdapter.java:174) ~[spring-core-7.0.5.jar:7.0.5]
+	at java.base/java.util.Collections$UnmodifiableMap.forEach(Collections.java:1712) ~[na:na]
+	at org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.getCandidateConfigurations(ImportAutoConfigurationImportSelector.java:85) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector.getAutoConfigurationEntry(AutoConfigurationImportSelector.java:147) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at org.springframework.boot.autoconfigure.AutoConfigurationImportSelector$AutoConfigurationGroup.process(AutoConfigurationImportSelector.java:481) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGrouping.getImports(ConfigurationClassParser.java:931) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorGroupingHandler.processGroupImports(ConfigurationClassParser.java:860) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser$DeferredImportSelectorHandler.handle(ConfigurationClassParser.java:816) ~[spring-context-7.0.5.jar:7.0.5]
+	at org.springframework.context.annotation.ConfigurationClassParser.processImports(ConfigurationClassParser.java:603) ~[spring-context-7.0.5.jar:7.0.5]
+	... 24 common frames omitted
+Caused by: java.lang.ClassNotFoundException: org.springframework.boot.autoconfigure.web.client.RestClientAutoConfiguration
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:580) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:490) ~[na:na]
+	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
+	at java.base/java.lang.Class.forName(Class.java:547) ~[na:na]
+	at java.base/sun.reflect.generics.factory.CoreReflectionFactory.makeNamedType(CoreReflectionFactory.java:117) ~[na:na]
+	at java.base/sun.reflect.generics.visitor.Reifier.visitClassTypeSignature(Reifier.java:125) ~[na:na]
+	at java.base/sun.reflect.generics.tree.ClassTypeSignature.accept(ClassTypeSignature.java:49) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseSig(AnnotationParser.java:437) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseClassValue(AnnotationParser.java:423) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.lambda$parseClassArray$0(AnnotationParser.java:712) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseArrayElements(AnnotationParser.java:740) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseClassArray(AnnotationParser.java:711) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseArray(AnnotationParser.java:524) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseMemberValue(AnnotationParser.java:348) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotation2(AnnotationParser.java:281) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations2(AnnotationParser.java:120) ~[na:na]
+	at java.base/sun.reflect.annotation.AnnotationParser.parseAnnotations(AnnotationParser.java:72) ~[na:na]
+	at java.base/java.lang.Class.createAnnotationData(Class.java:3671) ~[na:na]
+	at java.base/java.lang.Class.annotationData(Class.java:3660) ~[na:na]
+	at java.base/java.lang.Class.getDeclaredAnnotations(Class.java:3627) ~[na:na]
+	at org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.collectAnnotations(ImportAutoConfigurationImportSelector.java:157) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.getAnnotations(ImportAutoConfigurationImportSelector.java:150) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	at org.springframework.boot.autoconfigure.ImportAutoConfigurationImportSelector.getCandidateConfigurations(ImportAutoConfigurationImportSelector.java:84) ~[spring-boot-autoconfigure-4.0.3.jar:4.0.3]
+	... 30 common frames omitted
+
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.044 s
+[INFO] Finished at: 2026-03-08T15:19:19+05:30
+[INFO] ------------------------------------------------------------------------

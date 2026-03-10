@@ -1,0 +1,1010 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ccdc9db8-1aa7-4734-b329-383aae6f0c0a" name="Changes" comment="ollama ai service">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/com/himanshu/easystore/ai/AiServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/com/himanshu/easystore/ai/api/AiChatController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/com/himanshu/easystore/ai/api/AiEmbeddingController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/com/himanshu/easystore/ai/domain/ProductEmbeddingRequestDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/com/himanshu/easystore/ai/service/IAiService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/com/himanshu/easystore/ai/service/OllamaAiService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/java/com/himanshu/easystore/ai/service/ProductEmbeddingGenerator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ai-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/java/com/himanshu/easystore/gateway/ApiGatewayApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/api-gateway/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contact/ContactServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contact/api/ContactController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contact/domain/Contact.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contact/domain/ContactDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contact/repository/ContactRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contact/service/ContactServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contact/service/IContactService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/java/com/himanshu/easystore/contactservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/contact-service/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-common/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-common/src/main/java/com/himanshu/easystore/core/api/ApiResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-common/src/main/java/com/himanshu/easystore/core/api/DummyController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-common/src/main/java/com/himanshu/easystore/core/api/ErrorMessageDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-common/src/main/java/com/himanshu/easystore/core/api/GlobalExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-common/src/main/java/com/himanshu/easystore/core/config/AuditorAwareImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/core-common/src/main/java/com/himanshu/easystore/core/domain/BasicEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/init/contact-init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/init/identity-init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/db/init/product-init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#ib_16384_0.dblwr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#ib_16384_1.dblwr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo10_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo11_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo12_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo13_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo14_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo15_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo16_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo17_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo18_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo19_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo20_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo21_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo22_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo23_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo24_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo25_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo26_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo27_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo28_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo29_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo30_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo31_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo32_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo33_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo34_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo35_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo36_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo37_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo38_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo39_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo40_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_redo/#ib_redo9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_1.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_10.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_2.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_3.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_4.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_5.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_6.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_7.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_8.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/#innodb_temp/temp_9.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/auto.cnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/binlog.000001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/binlog.000002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/binlog.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/ca-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/ca.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/client-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/client-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/easystore_contact/contacts.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/ib_buffer_pool" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/ibdata1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql.sock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql/general_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql/general_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql/general_log_213.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql/slow_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql/slow_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/mysql/slow_log_214.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/accounts_145.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/binary_log_trans_189.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/cond_instances_82.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/data_lock_waits_161.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/data_locks_160.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/error_log_83.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_errors_su_139.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_errors_su_140.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_errors_su_141.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_errors_su_142.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_errors_su_143.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_cu_111.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_hi_112.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_hi_113.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_su_114.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_su_115.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_su_116.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_su_117.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_stages_su_118.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_119.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_120.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_121.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_122.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_123.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_124.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_125.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_126.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_127.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_128.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_129.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_statement_130.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_131.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_132.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_133.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_134.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_135.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_136.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_137.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_transacti_138.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_cur_84.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_his_85.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_his_86.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_sum_87.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_sum_88.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_sum_89.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_sum_90.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_sum_91.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/events_waits_sum_92.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/file_instances_93.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/file_summary_by__94.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/file_summary_by__95.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/global_status_181.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/global_variables_184.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/host_cache_96.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/hosts_146.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/keyring_componen_191.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/keyring_keys_152.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/log_status_174.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/memory_summary_b_154.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/memory_summary_b_155.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/memory_summary_b_156.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/memory_summary_b_157.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/memory_summary_g_153.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/metadata_locks_159.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/mutex_instances_97.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/objects_summary__98.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/performance_time_99.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/persisted_variab_187.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/prepared_stateme_175.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/processlist_100.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_appl_165.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_appl_166.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_appl_167.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_appl_168.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_appl_170.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_appl_171.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_asyn_172.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_asyn_173.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_conn_162.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_conn_164.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_grou_163.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/replication_grou_169.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/rwlock_instances_101.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/session_account__151.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/session_connect__150.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/session_status_182.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/session_variable_185.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/setup_actors_102.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/setup_consumers_103.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/setup_instrument_104.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/setup_objects_105.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/setup_threads_106.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/socket_instances_147.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/socket_summary_b_148.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/socket_summary_b_149.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/status_by_accoun_177.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/status_by_host_178.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/status_by_thread_179.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/status_by_user_180.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/table_handles_158.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/table_io_waits_s_107.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/table_io_waits_s_108.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/table_lock_waits_109.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/threads_110.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/tls_channel_stat_190.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/user_defined_fun_188.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/user_variables_b_176.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/users_144.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/variables_by_thr_183.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/performance_schema/variables_info_186.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/private_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/public_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/server-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/server-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/sys/sys_config.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/undo_001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-contact-data/undo_002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#ib_16384_0.dblwr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#ib_16384_1.dblwr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo10_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo11_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo12_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo13_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo14_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo15_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo16_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo17_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo18_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo19_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo20_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo21_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo22_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo23_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo24_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo25_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo26_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo27_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo28_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo29_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo30_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo31_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo32_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo33_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo34_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo35_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo36_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo37_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo38_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo39_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo40_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_redo/#ib_redo9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_1.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_10.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_2.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_3.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_4.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_5.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_6.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_7.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_8.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/#innodb_temp/temp_9.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/auto.cnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/binlog.000001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/binlog.000002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/binlog.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/ca-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/ca.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/client-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/client-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/easystore_product/products.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/ib_buffer_pool" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/ibdata1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql.sock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql/general_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql/general_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql/general_log_213.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql/slow_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql/slow_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/mysql/slow_log_214.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/accounts_145.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/binary_log_trans_189.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/cond_instances_82.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/data_lock_waits_161.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/data_locks_160.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/error_log_83.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_errors_su_139.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_errors_su_140.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_errors_su_141.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_errors_su_142.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_errors_su_143.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_cu_111.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_hi_112.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_hi_113.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_su_114.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_su_115.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_su_116.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_su_117.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_stages_su_118.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_119.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_120.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_121.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_122.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_123.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_124.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_125.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_126.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_127.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_128.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_129.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_statement_130.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_131.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_132.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_133.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_134.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_135.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_136.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_137.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_transacti_138.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_cur_84.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_his_85.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_his_86.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_sum_87.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_sum_88.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_sum_89.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_sum_90.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_sum_91.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/events_waits_sum_92.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/file_instances_93.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/file_summary_by__94.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/file_summary_by__95.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/global_status_181.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/global_variables_184.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/host_cache_96.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/hosts_146.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/keyring_componen_191.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/keyring_keys_152.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/log_status_174.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/memory_summary_b_154.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/memory_summary_b_155.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/memory_summary_b_156.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/memory_summary_b_157.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/memory_summary_g_153.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/metadata_locks_159.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/mutex_instances_97.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/objects_summary__98.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/performance_time_99.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/persisted_variab_187.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/prepared_stateme_175.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/processlist_100.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_appl_165.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_appl_166.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_appl_167.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_appl_168.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_appl_170.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_appl_171.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_asyn_172.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_asyn_173.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_conn_162.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_conn_164.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_grou_163.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/replication_grou_169.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/rwlock_instances_101.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/session_account__151.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/session_connect__150.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/session_status_182.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/session_variable_185.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/setup_actors_102.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/setup_consumers_103.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/setup_instrument_104.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/setup_objects_105.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/setup_threads_106.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/socket_instances_147.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/socket_summary_b_148.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/socket_summary_b_149.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/status_by_accoun_177.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/status_by_host_178.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/status_by_thread_179.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/status_by_user_180.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/table_handles_158.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/table_io_waits_s_107.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/table_io_waits_s_108.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/table_lock_waits_109.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/threads_110.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/tls_channel_stat_190.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/user_defined_fun_188.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/user_variables_b_176.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/users_144.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/variables_by_thr_183.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/performance_schema/variables_info_186.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/private_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/public_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/server-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/server-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/sys/sys_config.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/undo_001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-data/undo_002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#ib_16384_0.dblwr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#ib_16384_1.dblwr" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo10_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo11_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo12_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo13_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo14_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo15_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo16_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo17_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo18_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo19_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo20_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo21_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo22_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo23_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo24_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo25_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo26_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo27_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo28_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo29_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo30_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo31_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo32_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo33_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo34_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo35_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo36_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo37_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo38_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo39_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo40_tmp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_redo/#ib_redo9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_1.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_10.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_2.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_3.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_4.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_5.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_6.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_7.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_8.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/#innodb_temp/temp_9.ibt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/auto.cnf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/binlog.000001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/binlog.000002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/binlog.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/ca-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/ca.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/client-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/client-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/easystore_identity/roles.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/easystore_identity/user_roles.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/easystore_identity/users.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/ib_buffer_pool" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/ibdata1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/ibtmp1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql.sock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql/general_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql/general_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql/general_log_213.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql/slow_log.CSM" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql/slow_log.CSV" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/mysql/slow_log_214.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/accounts_145.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/binary_log_trans_189.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/cond_instances_82.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/data_lock_waits_161.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/data_locks_160.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/error_log_83.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_errors_su_139.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_errors_su_140.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_errors_su_141.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_errors_su_142.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_errors_su_143.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_cu_111.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_hi_112.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_hi_113.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_su_114.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_su_115.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_su_116.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_su_117.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_stages_su_118.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_119.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_120.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_121.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_122.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_123.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_124.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_125.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_126.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_127.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_128.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_129.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_statement_130.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_131.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_132.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_133.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_134.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_135.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_136.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_137.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_transacti_138.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_cur_84.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_his_85.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_his_86.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_sum_87.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_sum_88.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_sum_89.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_sum_90.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_sum_91.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/events_waits_sum_92.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/file_instances_93.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/file_summary_by__94.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/file_summary_by__95.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/global_status_181.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/global_variables_184.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/host_cache_96.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/hosts_146.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/keyring_componen_191.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/keyring_keys_152.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/log_status_174.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/memory_summary_b_154.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/memory_summary_b_155.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/memory_summary_b_156.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/memory_summary_b_157.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/memory_summary_g_153.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/metadata_locks_159.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/mutex_instances_97.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/objects_summary__98.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/performance_time_99.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/persisted_variab_187.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/prepared_stateme_175.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/processlist_100.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_appl_165.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_appl_166.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_appl_167.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_appl_168.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_appl_170.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_appl_171.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_asyn_172.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_asyn_173.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_conn_162.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_conn_164.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_grou_163.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/replication_grou_169.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/rwlock_instances_101.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/session_account__151.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/session_connect__150.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/session_status_182.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/session_variable_185.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/setup_actors_102.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/setup_consumers_103.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/setup_instrument_104.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/setup_objects_105.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/setup_threads_106.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/socket_instances_147.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/socket_summary_b_148.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/socket_summary_b_149.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/status_by_accoun_177.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/status_by_host_178.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/status_by_thread_179.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/status_by_user_180.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/table_handles_158.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/table_io_waits_s_107.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/table_io_waits_s_108.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/table_lock_waits_109.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/threads_110.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/tls_channel_stat_190.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/user_defined_fun_188.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/user_variables_b_176.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/users_144.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/variables_by_thr_183.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/performance_schema/variables_info_186.sdi" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/private_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/public_key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/server-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/server-key.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/sys/sys_config.ibd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/undo_001" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eazystore-identity-data/undo_002" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/himanshu/identityservice/IdentityServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/himanshu/identityservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/himanshu/identityservice/controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/himanshu/identityservice/domain/Role.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/himanshu/identityservice/domain/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/himanshu/identityservice/repository/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/java/com/himanshu/identityservice/service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/identity-service/src/main/resources/application.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/ProductServiceApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/api/ProductsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/config/RestClientConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/domain/Product.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/domain/ProductDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/repository/ProductRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/service/IProductService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/product/service/ProductServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/java/com/himanshu/easystore/productservice/config/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/product-service/src/main/resources/application.properties" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$/auth-service">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="auth-service" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+        <option value="package-info" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;himanshuKp&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/himanshuKp/easystore.git&quot;,
+    &quot;accountId&quot;: &quot;7495b9fe-934e-48be-9fc5-0bfc092fbd06&quot;
+  }
+}</component>
+  <component name="HttpClientOnboardingState">{
+  &quot;isOnboardingCommentShown&quot;: true
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Security Analysis" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="38ZKRQbQ60tfjO1U0TNnSBOg2jV" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Docker.docker-compose.yml: Compose Deployment.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Build auth-service.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.EasystoreApplication | #1.executor&quot;: &quot;Run&quot;,
+    &quot;HTTP Request.products | GET request to example server.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.AiServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ApiGatewayApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication (1).executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.AuthServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ContactServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.DiscoveryServerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.EasystoreApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.IdentityServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Spring Boot.ProductServiceApplication.executor&quot;: &quot;Run&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/himanshukandpal/github/projects/easystore-react-springboot/easystore&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.configurations.included.in.services&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql.9&quot;,
+      &quot;h2&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/sql" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="KtorApplicationConfigurationType" />
+        <option value="MicronautRunConfigurationType" />
+        <option value="QuarkusRunConfigurationType" />
+      </set>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ContactServiceApplication">
+    <configuration name="EasystoreApplication | #1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" nameIsGenerated="true" path="$APPLICATION_CONFIG_DIR$/scratches/EasystoreApplication.http" executionIdentifier="#1" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="AiServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="ai-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.himanshu.easystore.ai.AiServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiGatewayApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="api-gateway" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.himanshu.easystore.gateway.ApiGatewayApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ContactServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="contact-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.himanshu.easystore.contact.ContactServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IdentityServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="identity-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.himanshu.identityservice.IdentityServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <module name="product-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.himanshu.easystore.product.ProductServiceApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="docker-compose.yml: Compose Deployment" type="docker-deploy" factoryName="docker-compose.yml" temporary="true" server-name="Docker">
+      <deployment type="docker-compose.yml">
+        <settings>
+          <option name="sourceFilePath" value="docker-compose.yml" />
+        </settings>
+      </deployment>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+      <item itemvalue="HTTP Request.EasystoreApplication | #1" />
+      <item itemvalue="Spring Boot.IdentityServiceApplication" />
+      <item itemvalue="Spring Boot.AiServiceApplication" />
+      <item itemvalue="Spring Boot.ApiGatewayApplication" />
+      <item itemvalue="Spring Boot.ContactServiceApplication" />
+      <item itemvalue="Spring Boot.ProductServiceApplication" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="HTTP Request.EasystoreApplication | #1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-2fc7cc6b9a17-intellij.indexing.shared.core-IU-253.31033.145" />
+        <option value="bundled-js-predefined-d6986cc7102b-9b0f141eb926-JavaScript-IU-253.31033.145" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ccdc9db8-1aa7-4734-b329-383aae6f0c0a" name="Changes" comment="" />
+      <created>1769001646397</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1769001646397</updated>
+      <workItem from="1769001647500" duration="1619000" />
+      <workItem from="1769434476344" duration="27000" />
+      <workItem from="1769915958396" duration="688000" />
+      <workItem from="1769921269650" duration="407000" />
+      <workItem from="1770163901517" duration="943000" />
+      <workItem from="1770164957277" duration="3787000" />
+      <workItem from="1770211787925" duration="15106000" />
+      <workItem from="1770814583605" duration="4268000" />
+      <workItem from="1770995314694" duration="392000" />
+      <workItem from="1771148412347" duration="142000" />
+      <workItem from="1771236734742" duration="12977000" />
+      <workItem from="1771497066208" duration="8973000" />
+      <workItem from="1772027377694" duration="572000" />
+      <workItem from="1772027991697" duration="4760000" />
+      <workItem from="1772440693425" duration="17047000" />
+      <workItem from="1772545022403" duration="1811000" />
+      <workItem from="1772548445479" duration="2781000" />
+      <workItem from="1772631240724" duration="782000" />
+      <workItem from="1772682656448" duration="2335000" />
+      <workItem from="1772935613894" duration="2350000" />
+      <workItem from="1772960883651" duration="1391000" />
+      <workItem from="1772963780112" duration="37659000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial setup of be">
+      <option name="closed" value="true" />
+      <created>1770170114196</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1770170114196</updated>
+    </task>
+    <task id="LOCAL-00002" summary="initial setup of be">
+      <option name="closed" value="true" />
+      <created>1770810879034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1770810879034</updated>
+    </task>
+    <task id="LOCAL-00003" summary="mysql integration and dark mode fix for dropdown">
+      <option name="closed" value="true" />
+      <created>1771327355691</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1771327355691</updated>
+    </task>
+    <task id="LOCAL-00004" summary="configuration update for backend">
+      <option name="closed" value="true" />
+      <created>1771466216185</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1771466216186</updated>
+    </task>
+    <task id="LOCAL-00005" summary="contact form controller api">
+      <option name="closed" value="true" />
+      <created>1771851408753</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1771851408754</updated>
+    </task>
+    <task id="LOCAL-00006" summary="spring version upgrade, devtools actuator added">
+      <option name="closed" value="true" />
+      <created>1772029695734</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1772029695734</updated>
+    </task>
+    <task id="LOCAL-00007" summary="dummy controller, openapi integration, global exception handling, response entity use">
+      <option name="closed" value="true" />
+      <created>1772449407734</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1772449407734</updated>
+    </task>
+    <task id="LOCAL-00008" summary="method and contraint level exception handling">
+      <option name="closed" value="true" />
+      <created>1772501863872</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1772501863872</updated>
+    </task>
+    <task id="LOCAL-00009" summary="ai ready exception handling using problemdetail">
+      <option name="closed" value="true" />
+      <created>1772504318091</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1772504318091</updated>
+    </task>
+    <task id="LOCAL-00010" summary="jpaauditing inclusion, base entity impl, logging level impl">
+      <option name="closed" value="true" />
+      <created>1772549729920</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1772549729920</updated>
+    </task>
+    <task id="LOCAL-00011" summary="backend code setup, monolith converted to multi microservice project">
+      <option name="closed" value="true" />
+      <created>1773010575963</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1773010575963</updated>
+    </task>
+    <task id="LOCAL-00012" summary="ollama ai service">
+      <option name="closed" value="true" />
+      <created>1773011048752</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1773011048752</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-core" />
+    <option featureType="dependencySupport" implementationName="executable:docker" />
+    <option featureType="dependencySupport" implementationName="java:jakarta.persistence:jakarta.persistence-api" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.data:spring-data-commons" />
+    <option featureType="dependencySupport" implementationName="executable:kubectl" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework.boot:spring-boot" />
+    <option featureType="dependencySupport" implementationName="java:org.springframework:spring-webmvc" />
+    <option featureType="dependencySupport" implementationName="java:org.projectlombok:lombok" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/../../.." />
+      <path value="$PROJECT_DIR$/../.." />
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+    <MESSAGE value="initial setup of be" />
+    <MESSAGE value="mysql integration and dark mode fix for dropdown" />
+    <MESSAGE value="configuration update for backend" />
+    <MESSAGE value="contact form controller api" />
+    <MESSAGE value="spring version upgrade, devtools actuator added" />
+    <MESSAGE value="dummy controller, openapi integration, global exception handling, response entity use" />
+    <MESSAGE value="method and contraint level exception handling" />
+    <MESSAGE value="ai ready exception handling using problemdetail" />
+    <MESSAGE value="jpaauditing inclusion, base entity impl, logging level impl" />
+    <MESSAGE value="backend code setup, monolith converted to multi microservice project" />
+    <MESSAGE value="ollama ai service" />
+    <option name="LAST_COMMIT_MESSAGE" value="ollama ai service" />
+  </component>
+</project>
