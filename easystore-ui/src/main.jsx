@@ -15,6 +15,7 @@ import "react-toastify/dist/ReactToastify.css";
 import {contactAction} from "./features/contact/ContactAction.jsx";
 import ProductDetail from "./features/product/ProductDetail.jsx";
 import {CartProvider} from "./context/CartProvider.jsx";
+import {loginAction} from "./features/login/LoginAction.jsx";
 
 const routerDefinitions = createRoutesFromElements(
     <Route path="/" element={<App/>} errorElement={<ErrorBoundary/>}>
@@ -22,7 +23,7 @@ const routerDefinitions = createRoutesFromElements(
         <Route path={"/home"} element={<Home/>} loader={productsLoader}/>
         <Route path={"/about"} element={<About/>}/>
         <Route path={"/contact"} element={<Contact/>} action={contactAction}/>
-        <Route path={"/login"} element={<Login/>}/>
+        <Route path={"/login"} element={<Login/>} action={loginAction}/>
         <Route path={"/cart"} element={<Cart/>}/>
         <Route path={"/product/:productId"} element={<ProductDetail/>}/>
     </Route>
