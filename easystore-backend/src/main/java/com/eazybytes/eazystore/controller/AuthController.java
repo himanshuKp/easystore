@@ -31,39 +31,34 @@ import java.util.List;
 public class AuthController {
 
 	private final AuthenticationManager authenticationManager;
-	private final InMemoryUserDetailsManager inMemoryUserDetailsManager;
-	private final PasswordEncoder passwordEncoder;
-	private final JwtUtil jwtUtil;
+    private final JwtUtil jwtUtil;
 
 	@PostMapping("/login")
 	public ResponseEntity<LoginResponseDto> apiLogin(@RequestBody LoginRequestDto loginRequestDto) {
-		try {
-			Authentication authentication = authenticationManager.authenticate(
-					new UsernamePasswordAuthenticationToken(loginRequestDto.username(), loginRequestDto.password()));
-			var userDto = new UserDto();
-			var loggedInUser = (User) authentication.getPrincipal();
-			userDto.setName(loggedInUser.getUsername());
-			String jwtToken = jwtUtil.generateJwtToken(authentication);
-			return ResponseEntity.status(HttpStatus.OK)
-					.body(new LoginResponseDto(HttpStatus.OK.getReasonPhrase(), userDto, jwtToken));
-		} catch (BadCredentialsException ex) {
-			return buildErrorResponse(HttpStatus.UNAUTHORIZED, "Invalid username or password");
-		} catch (AuthenticationException ex) {
-			return buildErrorResponse(HttpStatus.UNAUTHORIZED, "Authentication failed");
-		} catch (Exception ex) {
-			return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, "An unexpected error occurred");
-		}
-	}
+        try {
+            Authentication authentication = authenticationManager.authenticate(
+                    new UsernamePasswordAuthenticationToken(
+                            loginRequestDto.username(),
+                            loginRequestDto.password()
+                    )
+            );
+            var userDto = new UserDto();
+            var loggedInUser = (User) authentication.getPrincipal();
+            userDto.setName(loggedInUser.getUsername());
+           String jwtToken = jwtUtil.generateJwtToken(authentication);
+            return ResponseEntity.status(HttpStatus.OK)
+                    .body(new LoginResponseDto(HttpStatus.OK.getReasonPhrase(), userDto, jwtToken));
+        } catch (BadCredentialsException e) {
+            return buildErrorResponse(HttpStatus.UNAUTHORIZED, "Invalid user credentials");
+        } catch (AuthenticationException e) {
+            return buildErrorResponse(HttpStatus.UNAUTHORIZED, "Unable to authenticate");
+        } catch (Exception e){
+            return buildErrorResponse(HttpStatus.INTERNAL_SERVER_ERROR, e.getMessage());
+        }
+    }
 
-	@PostMapping("/register")
-	public ResponseEntity<String> registerUser(@Valid @RequestBody RegisterRequestDto registerRequestDto) {
-		inMemoryUserDetailsManager.createUser(new User(registerRequestDto.getEmail(),
-				passwordEncoder.encode(registerRequestDto.getPassword()), List.of(new SimpleGrantedAuthority("USER"))));
-		return ResponseEntity.status(HttpStatus.CREATED).body("Registration successful");
-	}
-
-	private ResponseEntity<LoginResponseDto> buildErrorResponse(HttpStatus status, String message) {
-		return ResponseEntity.status(status).body(new LoginResponseDto(message, null, null));
+	private ResponseEntity<LoginResponseDto> buildErrorResponse(HttpStatus httpStatus, String errorDescription) {
+		return ResponseEntity.status(httpStatus).body(new LoginResponseDto(errorDescription, null, null));
 	}
 
 }

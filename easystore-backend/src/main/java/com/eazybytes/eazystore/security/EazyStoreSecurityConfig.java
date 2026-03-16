@@ -8,6 +8,7 @@ import org.springframework.security.authentication.ProviderManager;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -33,7 +34,7 @@ public class EazyStoreSecurityConfig {
 
 	@Bean
 	SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-		return http.csrf(csrfConfig -> csrfConfig.disable())
+		return http.csrf(AbstractHttpConfigurer::disable)
 				.cors(corsConfig -> corsConfig.configurationSource(corsConfigurationSource()))
 				.authorizeHttpRequests((requests) -> {
 					publicPaths.forEach(path -> requests.requestMatchers(path).permitAll());
