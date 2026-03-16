@@ -16,6 +16,9 @@ import {contactAction} from "./features/contact/ContactAction.jsx";
 import ProductDetail from "./features/product/ProductDetail.jsx";
 import {CartProvider} from "./context/CartProvider.jsx";
 import {loginAction} from "./features/login/LoginAction.jsx";
+import {AuthProvider} from './context/AuthProvider.jsx';
+import Checkout from "./components/Checkout.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
 const routerDefinitions = createRoutesFromElements(
     <Route path="/" element={<App/>} errorElement={<ErrorBoundary/>}>
@@ -25,6 +28,9 @@ const routerDefinitions = createRoutesFromElements(
         <Route path={"/contact"} element={<Contact/>} action={contactAction}/>
         <Route path={"/login"} element={<Login/>} action={loginAction}/>
         <Route path={"/cart"} element={<Cart/>}/>
+        <Route element={<ProtectedRoute/>}>
+            <Route path={"/checkout"} element={<Checkout/>}/>
+        </Route>
         <Route path={"/product/:productId"} element={<ProductDetail/>}/>
     </Route>
 )
@@ -33,9 +39,11 @@ const appRouter = createBrowserRouter(routerDefinitions);
 
 createRoot(document.getElementById('root')).render(
     <StrictMode>
-        <CartProvider>
-            <RouterProvider router={appRouter}/>
-        </CartProvider>
+        <AuthProvider>
+            <CartProvider>
+                <RouterProvider router={appRouter}/>
+            </CartProvider>
+        </AuthProvider>
         <ToastContainer
             position="top-center"
             autoClose={3000}

@@ -1,17 +1,17 @@
 import apiClient from "../../api/clients/apiClient.js";
 
-export async function loginAction({request}) {
+export async function loginAction({ request }) {
     const data = await request.formData();
 
     const loginData = {
-        username: data.username,
-        password: data.password,
+        username: data.get("username"),
+        password: data.get("password"),
     }
 
     try {
         const response = await apiClient.post("/auth/login", loginData);
-        const {message, user, jwtToken} = response.data;
-        return {success: true, message, user, jwtToken};
+        const { message, user, jwtToken } = response.data;
+        return { success: true, message, user, jwtToken };
     } catch (error) {
         if (error?.response?.status === 401) {
             return {
