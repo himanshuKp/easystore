@@ -19,6 +19,11 @@ import {loginAction} from "./features/login/LoginAction.jsx";
 import {AuthProvider} from './context/AuthProvider.jsx';
 import Checkout from "./components/Checkout.jsx";
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
+import Profile from "./components/Profile.jsx";
+import Orders from "./components/Orders.jsx";
+import AdminOrders from "./components/admin/AdminOrders.jsx";
+import Messages from "./components/admin/Messages.jsx";
+import Register, {registerAction} from "./components/Register.jsx";
 
 const routerDefinitions = createRoutesFromElements(
     <Route path="/" element={<App/>} errorElement={<ErrorBoundary/>}>
@@ -28,8 +33,13 @@ const routerDefinitions = createRoutesFromElements(
         <Route path={"/contact"} element={<Contact/>} action={contactAction}/>
         <Route path={"/login"} element={<Login/>} action={loginAction}/>
         <Route path={"/cart"} element={<Cart/>}/>
+        <Route path={"/register"} element={<Register/>} action={registerAction}/>
         <Route element={<ProtectedRoute/>}>
             <Route path={"/checkout"} element={<Checkout/>}/>
+            <Route path={"/profile"} element={<Profile/>}/>
+            <Route path={"/orders"} element={<Orders/>}/>
+            <Route path={"/admin/orders"} element={<AdminOrders/>}/>
+            <Route path={"/admin/messages"} element={<Messages/>}/>
         </Route>
         <Route path={"/product/:productId"} element={<ProductDetail/>}/>
     </Route>

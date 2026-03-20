@@ -1,20 +1,22 @@
 import PageTitle from "../../components/PageTitle.jsx";
-import { Form, Link, useActionData, useNavigate, useNavigation } from "react-router-dom";
-import { useEffect } from "react";
-import { toast } from "react-toastify";
-import { useAuth } from "../../hooks/useAuth.jsx";
+import {Form, Link, useActionData, useNavigate, useNavigation} from "react-router-dom";
+import {useEffect} from "react";
+import {toast} from "react-toastify";
+import {useAuth} from "../../hooks/useAuth.jsx";
 
 export default function Login() {
     const actionData = useActionData();
     const navigation = useNavigation();
     const isSubmitting = navigation.state === "submitting";
     const navigate = useNavigate();
-    const { login } = useAuth();
+    const {login} = useAuth();
+    const redirectPath = sessionStorage.getItem("redirectPath") || "/home";
 
     useEffect(() => {
         if (actionData?.success) {
             login(actionData.user, actionData.jwtToken);
-            navigate("/home");
+            sessionStorage.removeItem("redirectPath");
+            navigate(redirectPath);
             toast.success("Logged in successfully");
         } else if (actionData?.errors) {
             toast.error(actionData?.errors?.message || "Login Failed");
@@ -30,7 +32,7 @@ export default function Login() {
         <div className="min-h-213 flex items-center justify-center font-primary dark:bg-darkbg">
             <div className="bg-white dark:bg-gray-700 shadow-md rounded-lg max-w-md w-full px-8 py-6">
                 {/* Title */}
-                <PageTitle title="Login" />
+                <PageTitle title="Login"/>
 
                 <Form method={"POST"} className="space-y-6">
                     {/* Email Field */}
