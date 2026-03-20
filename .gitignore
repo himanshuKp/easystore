@@ -1,5 +1,6 @@
 # User requested ignores
 eazystore-data/
+easystore/
 easystore-ms/
 
 # Node.js
